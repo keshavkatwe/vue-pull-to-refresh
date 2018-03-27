@@ -45,7 +45,9 @@ module.exports = {
         }
     },
     output: {
-        path: path.resolve(__dirname, '../dist'),
-        filename: 'vue-pull-to-refresh.js'
+        library: 'VuePullToRefresh',
+        libraryTarget: 'umd',
+        filename: 'vue-pull-to-refresh.js',
+        path: path.resolve(__dirname, '../dist')
     }
 };
