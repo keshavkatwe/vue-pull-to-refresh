@@ -1,0 +1,44 @@
+{
+  "name": "vue-pull-to-refresh",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "dist/vue-pull-to-refresh.js",
+  "scripts": {
+    "serve": "webpack-dev-server --open --config build/webpack.dev.js",
+    "build": "node build/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/keshavkatwe/vue-pull-to-refresh.git",
+  "keywords": [
+    "pull",
+    "to",
+    "refresh",
+    "infinite",
+    "scrolling",
+    "reload"
+  ],
+  "author": "“Keshav <“keshav.katwe@gmail.com”> (http://keshavkatwe.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keshavkatwe/vue-pull-to-refresh/issues"
+  },
+  "homepage": "https://github.com/keshavkatwe/vue-pull-to-refresh#readme",
+  "devDependencies": {
+    "chalk": "^2.3.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^3.1.0",
+    "node-sass": "^4.8.3",
+    "ora": "^2.0.0",
+    "sass-loader": "^6.0.7",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
