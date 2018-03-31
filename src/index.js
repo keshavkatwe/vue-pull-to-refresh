@@ -1,3 +1,3 @@
-import Sample from './sample';
+import PullToRefresh from './pullToRefresh';
 
-export default Sample;
+export default PullToRefresh;

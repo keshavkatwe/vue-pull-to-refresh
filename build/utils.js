@@ -54,12 +54,7 @@ exports.cssLoaders = function (options) {
         sass: generateLoaders('sass', {
             indentedSyntax: true
         }),
-        scss: generateLoaders('sass').concat({
-            loader: 'sass-resources-loader',
-            options: {
-                resources: Config.globalScss
-            }
-        }),
+        scss: generateLoaders('sass'),
         stylus: generateLoaders('stylus'),
         styl: generateLoaders('stylus')
     }
