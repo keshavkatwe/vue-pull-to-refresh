@@ -4,10 +4,10 @@ A pull-down refresh and pull-up load more and infinite scroll component for Vue.
 
 [![Build Status](https://travis-ci.org/stackjie/vue-pull-to.svg?branch=master)](https://travis-ci.org/stackjie/vue-pull-to)
 [![Coverage Status](https://coveralls.io/repos/github/stackjie/vue-pull-to/badge.svg?branch=master)](https://coveralls.io/github/stackjie/vue-pull-to?branch=master)
-[![GitHub issues](https://img.shields.io/github/issues/stackjie/vue-pull-to.svg)](https://github.com/stackjie/vue-pull-to/issues)
-[![GitHub stars](https://img.shields.io/github/stars/stackjie/vue-pull-to.svg)](https://github.com/stackjie/vue-pull-to/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/stackjie/vue-pull-to/master/LICENSE)
-[![npm](https://img.shields.io/npm/v/vue-pull-to.svg)](https://www.npmjs.com/package/vue-pull-to) 
+[![GitHub issues](https://img.shields.io/github/issues/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/issues)
+[![GitHub stars](https://img.shields.io/github/stars/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/stargazers)
+[![GitHub license](https://img.shields.io/github/license/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/npm.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh)
 
 ## Live Examples
 <img src="http://ot6wx4ryg.bkt.clouddn.com/vuepullto_qrcode.png" style="display: block;" alt="qrcode">
