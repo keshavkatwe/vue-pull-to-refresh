@@ -2,17 +2,15 @@
 A pull-down refresh and pull-up load more and infinite scroll component for Vue.js.
 
 
-[![Build Status](https://travis-ci.org/stackjie/vue-pull-to.svg?branch=master)](https://travis-ci.org/stackjie/vue-pull-to)
-[![Coverage Status](https://coveralls.io/repos/github/stackjie/vue-pull-to/badge.svg?branch=master)](https://coveralls.io/github/stackjie/vue-pull-to?branch=master)
 [![GitHub issues](https://img.shields.io/github/issues/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/issues)
 [![GitHub stars](https://img.shields.io/github/stars/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/stargazers)
 [![GitHub license](https://img.shields.io/github/license/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/npm.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh)
 
 ## Live Examples
-<img src="http://ot6wx4ryg.bkt.clouddn.com/vuepullto_qrcode.png" style="display: block;" alt="qrcode">
+<img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fkeshavkatwe.github.io%2Fvue-pull-to-refresh%2Fexamples%2Fdist%2F&chs=180x180&choe=UTF-8&chld=L|2' alt=''>
 
-[examples](http://www.vuepullto.top)
+[examples](https://keshavkatwe.github.io/vue-pull-to-refresh/examples/dist/)
 
 ## Installation
 ```
@@ -60,7 +58,7 @@ A pull-down refresh and pull-up load more and infinite scroll component for Vue.
 
 The component will occupy 100% height of the parent element by default. props top-load-method and bottom-load-method will default to a loaded parameter, which is a function that changes the state of the component's load, and must be called once loaded. The component will always be loaded, if `loaded('done')` The internal state of the component will become a successful state of loading, `loaded('fail')` for the failure.
 
-[For more examples, please refer to examples of the code](https://github.com/stackjie/vue-pull-to/tree/master/examples)
+[For more examples, please refer to examples of the code](https://keshavkatwe.github.io/vue-pull-to-refresh/examples/dist/)
  
  ## API Docs
  
