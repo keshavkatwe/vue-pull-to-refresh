@@ -7,7 +7,8 @@
   "scripts": {
     "serve": "webpack-dev-server --open --config build/webpack.dev.js",
     "build": "node build/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "examples:build": "webpack --config build/webpack.examples.prod.js"
   },
   "repository": "git+https://github.com/keshavkatwe/vue-pull-to-refresh.git",
   "keywords": [
