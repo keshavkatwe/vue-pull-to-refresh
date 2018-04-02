@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './examples/main.js',
     module: {
         rules: [{
             test: /\.vue$/,
