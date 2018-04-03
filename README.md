@@ -47,7 +47,7 @@ Vue pull down refresh and infinite scrolling with loader.
     methods: {
      refresh(finish) {
        Service.getNews.then(res => {
-        this.articles = this.shuffleArray(res.articles);
+        this.articles = res.articles;
         finish();
        });
       },
@@ -62,57 +62,21 @@ Vue pull down refresh and infinite scrolling with loader.
  ### props
 | Attribute | Description | type | Default |
 | --- | --- | --- | --- | 
-| distance-index | Slip the threshold (the greater the value the slower the sliding) | Number | 2 |
-| top-block-height | The height of the block element area outside the top of the scroll container | Number | 50 |
-| bottom-block-height | The height of the block element area outside the scrolling container | Number | 50 |
+| sliding-threshold | Slip the threshold (the greater the value the slower the sliding) | Number | 2 |
+| top-slidingHeight | The height of the block element area outside the top of the scroll container | Number | 80 |
 | wrapper-height | The height of the scrolling container | String | '100%' |
-| top-load-method | Top drop-down method | Function | |
-| bottom-load-method | Bottom pull-up method | Function | |
-| is-throttle-top-pull | Whether the disable of the `top-pull` throttle event is triggered to ensure performance if the real-time trigger is set to false | Boolean | true |
-| is-throttle-bottom-pull | Whether the disable of the `bottom-pull` throttle event is triggered to ensure performance if the real-time trigger is set to false | Boolean | true |
-| is-throttle-scroll | Whether the disable of the `scroll` throttle event is triggered to ensure performance if the real-time trigger is set to false | Boolean | true |
-| is-top-bounce | Whether to enable the pull-down bounce effect | Boolean | true |
-| is-bottom-bounce | Whether to enable the pull-up bounce effect | Boolean | true |
-| top-config | Scroll the container at the top of the configuration | Object | default config |
-| bottom-config | Scroll the container at the bottom of the configuration | Object | default config |
+| refresh | Top drop-down method | Function | |
+| triggerScroll | Scroll bottom end | Function | |
 
-`topConfig` and `bottomConfig` Configurable options and default configuration item values
-``` javascript
-const TOP_DEFAULT_CONFIG = {
-  pullText: '下拉刷新', // The text is displayed when you pull down
-  triggerText: '释放更新', // The text that appears when the trigger distance is pulled down
-  loadingText: '加载中...', // The text in the load
-  doneText: '加载完成', // Load the finished text
-  failText: '加载失败', // Load failed text
-  loadedStayTime: 400, // Time to stay after loading ms
-  stayDistance: 50, // Trigger the distance after the refresh
-  triggerDistance: 70 // Pull down the trigger to trigger the distance
-}
-
-const BOTTOM_DEFAULT_CONFIG = {
-  pullText: '上拉加载',
-  triggerText: '释放更新',
-  loadingText: '加载中...',
-  doneText: '加载完成',
-  failText: '加载失败',
-  loadedStayTime: 400,
-  stayDistance: 50,
-  triggerDistance: 70
-}
 ```
  ### slots
 | Name | Description | scope |
 | --- | --- | --- |
 | default | The default slot scrolls the contents of the container |
-| top-block | Scroll the contents of the top of the container outer (support the scope slot need to use `template` tag with scope `attribute`) | `state`：Current state、`state-text`：State corresponding to the text |
-| bottom-block | Scroll the contents of the bottom of the container outer (support the scope slot need to use `template` tag with scope `attribute`) | `state`：Current state、`state-text`：State corresponding to the text |
+| top-scroll-container | Scroll the contents of the top of the container outer (support the scope slot need to use `template` tag with slot-scope `attribute`) | `state`：Current state |
 
  ### events
 | name | Description |
 | --- | --- |
-| top-state-change | When the top state has changed, the first parameter is the current state |
-| bottom-state-change | When the bottom state has changed, the first parameter is the current state |
-| top-pull | Pull down the trigger, the first parameter for the current pull of the distance value, the default will be throttle, config `isThrottle` to real-time trigger |
-| bottom-pull | Pull up the trigger, the first parameter for the current pull of the distance value, the default will be throttle, config `isThrottle` to real-time trigger |
-| infinite-scroll | Triggered when the scroll container scrolls to the end |
-| scroll | When scrolling, the event callback function, the first parameter, is the native `event` object |
+| refresh | Pull down the trigger, with the `action` parameter to be called after success or failure |
+| triggerScroll | Triggered when the scroll container scrolls to the end |
