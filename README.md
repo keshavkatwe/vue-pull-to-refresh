@@ -1,4 +1,4 @@
-# Vue-Pull-To-Refresh
+# Vue-refresh
 A pull-down refresh and pull-up load more and infinite scroll component for Vue.js.
 
 
@@ -14,51 +14,48 @@ A pull-down refresh and pull-up load more and infinite scroll component for Vue.
 
 ## Installation
 ```
- npm install vue-pull-to-refresh --save
+ npm install vue-refresh --save
 ```
 
 ## Use Setup
 ``` vue
-<template>
-  <div>
-    <pull-to :top-load-method="refresh">
-      <ul v-for="item in dataList">
-        <li>{{ item }}</li>
-      </ul>
-    </pull-to>
-  </div> 
+<template>  
+   <div class="news__list">
+        <pull-to-refresh @refresh="refresh" ref="list" :triggerRefreshOnMounted="true">
+            <div class="news" v-for="(article, key) in articles" :key="key">
+                <h4 class="news__title">{{article.title}}</h4>
+                <p class="news__desc">{{article.description}}</p>
+            </div>
+        </pull-to-refresh>
+    </div>
 </template>
 
 <script>
-  import PullTo from 'vue-pull-to'
-  import { fetchDataList } from 'api'
+  import PullToRefresh from '../../src/pullToRefresh'
+  import Service from '../service'
   
   export default {
     name: 'example',
     components: {
-      PullTo
+      PullToRefresh
     },
     data() {
       return {
-        dataList: []
+        articles: [],
       }
     },
     methods: {
-      refresh(loaded) {
-       fetchDataList()
-        .then((res) => {
-          this.dataList = res.data.dataList
-          loaded('done')
-        })
-      }
+     refresh(finish) {
+       Service.getNews.then(res => {
+        this.articles = this.shuffleArray(res.articles);
+        finish();
+       });
+      },
     }
   }
 </script>
  ```
 
-The component will occupy 100% height of the parent element by default. props top-load-method and bottom-load-method will default to a loaded parameter, which is a function that changes the state of the component's load, and must be called once loaded. The component will always be loaded, if `loaded('done')` The internal state of the component will become a successful state of loading, `loaded('fail')` for the failure.
-
-[For more examples, please refer to examples of the code](https://keshavkatwe.github.io/vue-pull-to-refresh/examples/dist/)
  
  ## API Docs
  
