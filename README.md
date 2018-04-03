@@ -68,7 +68,7 @@ Vue pull down refresh and infinite scrolling with loader.
 | refresh | Top drop-down method | Function | |
 | triggerScroll | Scroll bottom end | Function | |
 
-```
+
  ### slots
 | Name | Description | scope |
 | --- | --- | --- |
