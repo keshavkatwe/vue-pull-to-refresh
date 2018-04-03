@@ -1,5 +1,5 @@
 # Vue-refresh
-A pull-down refresh and pull-up load more and infinite scroll component for Vue.js.
+Vue pull down refresh and infinite scrolling with loader.
 
 
 [![GitHub issues](https://img.shields.io/github/issues/keshavkatwe/vue-pull-to-refresh.svg?style=for-the-badge)](https://github.com/keshavkatwe/vue-pull-to-refresh/issues)
