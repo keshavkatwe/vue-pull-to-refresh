@@ -10,7 +10,7 @@ Vue pull down refresh and infinite scrolling with loader.
 ## Live Examples
 <img src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fkeshavkatwe.github.io%2Fvue-pull-to-refresh%2Fexamples%2Fdist%2F&chs=180x180&choe=UTF-8&chld=L|2' alt=''>
 
-[examples](https://keshavkatwe.github.io/vue-pull-to-refresh/examples/dist/)
+[examples](https://keshavkatwe.github.io/vue-refresh/examples/dist/)
 
 ## Installation
 ```
